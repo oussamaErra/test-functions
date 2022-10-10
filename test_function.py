@@ -6,15 +6,14 @@ from sklearn.datasets import make_classification
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.metrics import accuracy_score
 
-
 import numpy as np
 
 LOG = logging.getLogger()
 
 
 def test_function():
+    print("TEST DUMP")
     print(os.listdir())
-
 
 def trigger():
     LOG.info("shape of data is : {}")
