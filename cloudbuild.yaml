@@ -1,0 +1,12 @@
+# [START functions_ci_cd_cloud_build]
+steps:
+- name: 'docker.io/library/python:3.10'
+  entrypoint: /bin/sh
+  # Run pip install and pytest in the same build step
+  # (pip packages won't be preserved in future steps!)
+  args: [-c, 'pip install -r requirements.txt && pytest']
+  dir: '.'
+- name: 'gcr.io/cloud-builders/gcloud'
+  args: ['functions', 'deploy', 'fit-random-forest', '--trigger-http', '--runtime', 'python38', '--entry-point', 'trigger']
+  dir: '.'
+# [END functions_ci_cd_cloud_build]
