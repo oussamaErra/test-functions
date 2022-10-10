@@ -7,6 +7,6 @@ steps:
   args: [-c, 'pip install -r requirements.txt && pytest']
   dir: '.'
 - name: 'gcr.io/cloud-builders/gcloud'
-  args: ['functions', 'deploy', 'fit-random-forest','--gen2','--region','us-central1','--trigger-http', '--runtime', 'python38', '--entry-point', 'trigger']
+  args: ['functions', 'deploy', 'fit-random-forest','--region','us-central1','--trigger-http', '--runtime', 'python38', '--entry-point', 'trigger']
   dir: '.'
 # [END functions_ci_cd_cloud_build]
