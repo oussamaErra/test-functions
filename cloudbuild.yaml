@@ -10,6 +10,6 @@ steps:
   args: ['functions', 'deploy', 'test-second-generations','--gen2','--region','us-central1','--trigger-http', '--runtime', 'python310', '--entry-point', 'trigger']
   dir: '.'
 options:
- machineType: 'E2-STANDARD-2'
+ machineType: 'N1_HIGHCPU_8'
 
 # [END functions_ci_cd_cloud_build]
