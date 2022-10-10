@@ -12,7 +12,7 @@ LOG = logging.getLogger()
 
 
 def test_function():
-    print("TEST DUMP 2")
+    print("TEST DUMP 3")
     print(os.listdir())
 
 def trigger():
